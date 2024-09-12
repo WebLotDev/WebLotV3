@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">WebLot</h1>
+            <h1 class="logo"><img src="./logo-no-background.png" width="100px"></h1>
             <nav>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#home">Home</a></li>
@@ -22,13 +22,24 @@
                 </div>
             </nav>
         </div>
+        <section class="show_mobile">  <!--Αρχή εμφάνιση σε κινητά-->
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu" style="overflow: auto;">
+                <ul class="sidebarMenuInner"></ul>
+            </div>
+        </section>
     </header>
 
     <section id="home" class="hero">
         <div class="container">
             <h2>Your Vision, Our Expertise</h2>
             <p>Building stunning websites tailored to your business needs.</p>
-            <a href="#contact" class="btn">Get Started</a>
+            <a href="#pricing" class="btn">Get Started</a>
         </div>
     </section>
 
@@ -72,7 +83,7 @@
                         <li>Responsive Design</li>
                         <li>Email Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Choose Plan</a>
+                    <a href="#contact" class="btn">Details</a>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Standard</h3>
@@ -83,7 +94,7 @@
                         <li>SEO Optimization</li>
                         <li>Priority Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Choose Plan</a>
+                    <a href="#contact" class="btn">Details</a>
                 </div>
                 <div class="pricing-card">
                     <h3>Premium</h3>
@@ -95,7 +106,7 @@
                         <li>E-commerce Integration</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Choose Plan</a>
+                    <a href="#contact" class="btn">Details</a>
                 </div>
             </div>
         </div>
