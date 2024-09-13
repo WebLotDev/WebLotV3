@@ -54,6 +54,7 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #f4b400;
+    text-decoration: underline;
 }
 
 .hamburger {
@@ -288,3 +289,48 @@ footer .socials a:hover {
     color: #f4b400;
 }
 
+/* The popup background (dark overlay) */
+#popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  }
+
+  /* The popup content */
+  #popup, #popup2, #popup3, #popup4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    width: 300px;
+    text-align: center;
+  }
+
+  /* Close button */
+  .closePopup, .closePopup2, .closePopup3, .closePopup4 {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /* Button to open the popup */
+  #openPopupBtn,  #openPopupBtn2,  #openPopupBtn3,  #openPopupBtn4 {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

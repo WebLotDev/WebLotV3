@@ -83,7 +83,9 @@
                         <li>Responsive Design</li>
                         <li>Email Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Details</a>
+                    <button id="openPopupBtn">Open Popup</button>
+
+                <!-- Popup Overlay -->
                 </div>
                 <div class="pricing-card featured">
                     <h3>Standard</h3>
@@ -94,7 +96,7 @@
                         <li>SEO Optimization</li>
                         <li>Priority Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Details</a>
+                    <button id="openPopupBtn2">Open Popup</button>
                 </div>
                 <div class="pricing-card">
                     <h3>Premium</h3>
@@ -106,7 +108,7 @@
                         <li>E-commerce Integration</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <a href="#contact" class="btn">Details</a>
+                    <button id="openPopupBtn3">Open Popup</button>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Custom Plan</h3>
@@ -120,12 +122,39 @@
                         </p>
                     <br><br>
                     </ul>
-                    <a href="#contact" class="btn">Details</a>
+                    <button id="openPopupBtn4">Open Popup</button>
                 </div>
             </div>
         </div>
     </section>
-
+    <div id="popupOverlay">
+        <div id="popup">
+        <h2>Popup Content</h2>
+        <p>This is a simple popup example.</p>
+        <button class="closePopup">Close</button>
+        </div>
+    </div>
+    <div id="popupOverlay2"></div>
+        <div id="popup2">
+        <h2>Popup Content</h2>
+        <p>This is a simple popup example.</p>
+        <button class="closePopup2">Close</button>
+        </div>
+    </div>
+    <div id="popupOverlay3"></div>
+        <div id="popup2">
+        <h2>Popup Content</h2>
+        <p>This is a simple popup example.</p>
+        <button class="closePopup3">Close</button>
+        </div>
+    </div>
+    <div id="popupOverlay4"></div>
+        <div id="popup4">
+        <h2>Popup Content</h2>
+        <p>This is a simple popup example.</p>
+        <button class="closePopup4">Close</button>
+        </div>
+    </div>
     <section id="contact-container" class="contact container">
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
             <div class="contact-left-title">
@@ -155,6 +184,7 @@
             </div> -->
         </div>
     </footer>
-
+    <script src="script.js"></script>
+    <script src="popup.js"></script>
 </body>
 </html>
