@@ -263,9 +263,9 @@ footer .socials a:hover {
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
-    max-height: 60%;
-
-    overflow: scroll;
+    max-height: 90%;
+    width: 80%;
+    overflow: auto;
     border-radius: 10px;
     text-align: left;
   }
