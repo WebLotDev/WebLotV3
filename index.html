@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebLot - Web Development</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="mobile.css">
+
 </head>
 <body>
     <header>
         <div class="container">
-            <h1 class="logo"><img src="./logo-no-background.png" width="100px"></h1>
+            <a href="."><h1 class="logo"><img src="./logo-no-background.png" width="100px"></h1></a>
             <nav>
-                <ul class="nav-links" id="navLinks">
+                <ul class="nav-links" id="navLinks" >
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#pricing">Pricing</a></li>
@@ -30,7 +33,12 @@
                 <div class="spinner diagonal part-2"></div>
             </label>
             <div id="sidebarMenu" style="overflow: auto;">
-                <ul class="sidebarMenuInner"></ul>
+                <ul class="sidebarMenuInner">
+                      <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#contact-container">Contact</a></li>
+                </ul>
             </div>
         </section>
     </header>
@@ -83,7 +91,7 @@
                         <li>Responsive Design</li>
                         <li>Email Support</li>
                     </ul>
-                    <button id="openPopupBtn">Open Popup</button>
+                    <button id="openPopupBtn">Details</button>
 
                 <!-- Popup Overlay -->
                 </div>
@@ -96,7 +104,7 @@
                         <li>SEO Optimization</li>
                         <li>Priority Support</li>
                     </ul>
-                    <button id="openPopupBtn2">Open Popup</button>
+                    <button id="openPopupBtn2">Details</button>
                 </div>
                 <div class="pricing-card">
                     <h3>Premium</h3>
@@ -108,7 +116,7 @@
                         <li>E-commerce Integration</li>
                         <li>24/7 Support</li>
                     </ul>
-                    <button id="openPopupBtn3">Open Popup</button>
+                    <button id="openPopupBtn3">Details</button>
                 </div>
                 <div class="pricing-card featured">
                     <h3>Custom Plan</h3>
@@ -122,39 +130,70 @@
                         </p>
                     <br><br>
                     </ul>
-                    <button id="openPopupBtn4">Open Popup</button>
+                    <button id="openPopupBtn4">Details</button>
                 </div>
             </div>
         </div>
     </section>
-    <div id="popupOverlay">
-        <div id="popup">
-        <h2>Popup Content</h2>
-        <p>This is a simple popup example.</p>
-        <button class="closePopup">Close</button>
-        </div>
+    <!-- Popup Overlay 1 -->
+<div id="popupOverlay">
+    <div id="popup">
+        <h2>Basic Package</h2>
+        <p>Our Basic Package is ideal for small businesses or individuals who need a professional online presence without unnecessary complexities.</p>
+        <ul>
+            <li><strong>Up to 5 Pages:</strong> We create up to 5 custom pages covering the essential needs of your business, such as Home, Services, About Us, Contact, and Additional.</li>
+            <li><strong>Responsive Design:</strong> Your website will be fully optimized for any device, including mobile phones and tablets, ensuring an excellent user experience everywhere.</li>
+            <li><strong>Email Support:</strong> We provide basic email support for any questions or maintenance needs you may have.</li>
+        </ul>
+        <p>This package offers the perfect balance between functionality and affordability, allowing you to start your online presence with ease and professionalism.</p>
+              <button class="closePopup">Close</button>
     </div>
-    <div id="popupOverlay2"></div>
-        <div id="popup2">
-        <h2>Popup Content</h2>
-        <p>This is a simple popup example.</p>
+</div>
+
+<!-- Popup Overlay 2 -->
+<div id="popupOverlay2">
+    <div id="popup2">
+        <h2>Standard Package</h2>
+        <p>The "Standard" package is ideal for businesses looking to expand their online presence and enhance their visibility in search engines.</p>
+        <ul>
+            <li><strong>Up to 10 Pages:</strong> We provide up to 10 custom pages to cover your needs, with additional pages available for services, products, news, and anything else your business requires.</li>
+            <li><strong>Responsive Design:</strong> Your website will automatically adapt to any device, ensuring an excellent user experience on mobile phones, tablets, and computers.</li>
+            <li><strong>SEO Optimization:</strong> We optimize your website for search engines to improve your ranking on Google and attract more traffic.</li>
+            <li><strong>Priority Support:</strong> You will receive priority support, ensuring faster responses and solutions to your requests via email or phone.</li>
+        </ul>
+        <p>The "Standard" package is the ideal solution for businesses needing more features and better support to compete in the market.</p>
+        
         <button class="closePopup2">Close</button>
-        </div>
     </div>
-    <div id="popupOverlay3"></div>
-        <div id="popup2">
-        <h2>Popup Content</h2>
-        <p>This is a simple popup example.</p>
+</div>
+
+<!-- Popup Overlay 3 -->
+<div id="popupOverlay3">
+    <div id="popup3">
+        <h2>Premium Plan</h2>
+        <p><strong>Price:</strong> €1499</p>
+        <p>This comprehensive plan is designed for businesses that require advanced features and top-tier support for their growing digital presence.</p>
+        <ul>
+            <li><strong>Unlimited Pages</strong>: Create as many pages as you need without limitations.</li>
+            <li><strong>Responsive Design</strong>: Optimized to look great on all devices, from mobile to desktop.</li>
+            <li><strong>SEO Optimization</strong>: Full SEO support to improve your site's ranking on search engines and drive organic traffic.</li>
+            <li><strong>E-commerce Integration</strong>: Seamlessly integrate e-commerce functionality to sell your products or services online.</li>
+            <li><strong>24/7 Support</strong>: Get round-the-clock support to ensure everything runs smoothly.</li>
+        </ul>
         <button class="closePopup3">Close</button>
-        </div>
     </div>
-    <div id="popupOverlay4"></div>
-        <div id="popup4">
-        <h2>Popup Content</h2>
+</div>
+
+<!-- Popup Overlay 4 -->
+<div id="popupOverlay4">
+    <div id="popup4">
+        <h2>Custom Plan
+        </h2>
         <p>This is a simple popup example.</p>
         <button class="closePopup4">Close</button>
-        </div>
     </div>
+</div>
+
     <section id="contact-container" class="contact container">
         <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
             <div class="contact-left-title">

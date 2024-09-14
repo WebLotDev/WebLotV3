@@ -1,0 +1,106 @@
+/*Menu ΣΤΟΙΧΕΙΑ*/
+.sidebarMenuInner li a{
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .sidebarMenuInner li{
+    list-style: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  }
+  
+  .sidebarMenuInner li span{
+    display: block;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  
+  /* Mobile*/
+  @media only screen and (max-width: 720px) {
+  
+    #sidebarMenu {
+        overflow: auto;
+        height: 100%;
+        position: fixed;
+        right: 0;
+        width: 250px;
+        text-align: center;
+        /*Margin Top*/
+        margin-top: 90px;
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 250ms ease-in-out;
+        z-index: 1;
+        background-color: #333  /*Background Menu Deskpot*/
+      }
+    
+    /*Button Open Menu*/
+    .sidebarIconToggle {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        cursor: pointer;
+        z-index: 99;
+        top: 40px;
+        right: 15px;
+        width: 42px;
+        position: fixed;
+        z-index: 100;
+    }
+    .spinner {
+        height: 3px;
+        width: 90%;
+        background-color: #ffffff;
+    }
+  
+    .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+    .diagonal.part-1 {
+        position: relative;
+        transition: all 0.3s;
+        box-sizing: border-box;
+        float: left;
+    }
+    .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        position: relative;
+        float: left;
+        margin-top: 3px;
+    }
+  
+    input[type="checkbox"]:checked ~ #sidebarMenu { transform: translateX(0);}
+    
+    input[type=checkbox] {
+      transition: all 0.3s;
+      box-sizing: border-box;
+      display: none;}
+  
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        opacity: 0;}
+  
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(135deg);
+        margin-top: 8px;
+    }
+    input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+        transition: all 0.3s;
+        box-sizing: border-box;
+        transform: rotate(-135deg);
+        margin-top: -9px;
+    }
+    /*Menu end*/
+  
+  }
