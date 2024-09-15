@@ -1,58 +1,52 @@
-/* Container for the contact form */
 .contact{
     padding-top: 5%;
     padding-bottom: 5%;
 
 }
 .contact-left {
-    max-width: 600px; /* Μέγιστο πλάτος της φόρμας */
-    margin: 0 auto; /* Κεντράρισμα της φόρμας */
+    max-width: 600px; 
+    margin: 0 auto; 
     padding: 20px;
     height: 100%;
-    background-color: #f9f9f9; /* Ελαφρύ χρώμα φόντου */
-    border-radius: 8px; /* Στρογγυλεμένες γωνίες */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Σκιά για βάθος */
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-/* Title of the contact form */
 .contact-left-title h2 {
-    font-size: 24px; /* Μέγεθος γραμματοσειράς */
-    margin-bottom: 10px; /* Απόσταση κάτω από τον τίτλο */
-    color: #333; /* Σκούρο χρώμα κειμένου */
+    font-size: 24px; 
+    margin-bottom: 10px; 
+    color: #333; 
 }
 
 textarea.contact-inputs {
-    height: 100px; /* Ύψος για το textarea */
+    height: 100px; 
 }
 
 .contact-left-title hr {
-    border: 1px solid #f4b400; /* Χρώμα και πάχος της γραμμής */
-    margin: 10px 0; /* Απόσταση πάνω και κάτω από την γραμμή */
+    border: 1px solid #f4b400; 
+    margin: 10px 0; 
 }
 
-/* Styling for form inputs */
 .contact-inputs {
-    width: 100%; /* Πλάτος της φόρμας πλήρες */
-    padding: 12px; /* Εσωτερικό περιθώριο */
-    margin-bottom: 15px; /* Απόσταση κάτω από κάθε πεδίο */
-    border: 1px solid #ccc; /* Χρώμα και πάχος του πλαισίου */
-    border-radius: 5px; /* Στρογγυλεμένες γωνίες */
-    font-size: 16px; /* Μέγεθος γραμματοσειράς */
+    width: 100%; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    font-size: 16px; 
 }
-
-/* Styling for the submit button */
 .contact-left button {
-    width: 100%; /* Πλάτος πλήρες */
-    padding: 12px; /* Εσωτερικό περιθώριο */
-    border: none; /* Καταργεί το πλαίσιο */
-    border-radius: 5px; /* Στρογγυλεμένες γωνίες */
-    background-color: #f4b400; /* Χρώμα φόντου */
-    color: white; /* Χρώμα κειμένου */
-    font-size: 16px; /* Μέγεθος γραμματοσειράς */
-    cursor: pointer; /* Δείκτης χεριού */
-    transition: background-color 0.3s ease; /* Ομαλή μετάβαση χρώματος φόντου */
+    width: 100%; 
+    padding: 12px; 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #f4b400; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
 }
 
 .contact-left button:hover {
-    background-color: #f4b400; /* Σκούρο μπλε για hover εφέ */
+    background-color: #f4b400; 
 }
