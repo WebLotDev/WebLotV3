@@ -241,9 +241,8 @@ footer .socials a:hover {
     color: #f4b400;
 }
 
-/* The popup background (dark overlay) */
 #popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
-    display: none; /* Hidden by default */
+    display: none; 
     position: fixed;
     z-index: 10001;
     top: 0;
@@ -252,10 +251,9 @@ footer .socials a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    background-color: rgba(0, 0, 0, 0.5); 
   }
 
-  /* The popup content */
   #popup, #popup2, #popup3, #popup4 {
     position: absolute;
     top: 50%;
@@ -270,7 +268,6 @@ footer .socials a:hover {
     text-align: left;
   }
 
-  /* Close button */
   .closePopup, .closePopup2, .closePopup3, .closePopup4 {
     background-color: #f44336;
     color: white;
@@ -281,7 +278,6 @@ footer .socials a:hover {
         border-radius: 5px;
   }
 
-  /* Button to open the popup */
   #openPopupBtn, #openPopupBtn3 {
     padding: 10px 15px;
     background-color: #f4b400;
@@ -291,7 +287,6 @@ footer .socials a:hover {
     cursor: pointer;
   }
 
-    /* Button to open the popup */
     #openPopupBtn2,   #openPopupBtn4 {
         padding: 10px 15px;
         background-color: #ffffff;
@@ -301,9 +296,9 @@ footer .socials a:hover {
         cursor: pointer;
       }
     
-      #openPopupBtn:hover,#openPopupBtn2:hover ,#openPopupBtn3:hover,#openPopupBtn4:hover {
+      /* #openPopupBtn:hover,#openPopupBtn2:hover ,#openPopupBtn3:hover,#openPopupBtn4:hover {
         font-size: 20px;
-      }
+      } */
 
   @media only screen and (min-width: 720px) {
     .show_mobile  {display: none;}
@@ -312,7 +307,6 @@ footer .socials a:hover {
   }
   
   
-  /* Στυλ για κινητές συσκευές */
   
   @media only screen and (max-width: 720px) {
     .show_mobile {display: block;}
@@ -323,8 +317,7 @@ footer .socials a:hover {
     margin-top: 10px;
   }
 
-  /* Στυλ για τα links του μενού */
 .nav-links li a {
-    font-size: 20px; /* Μέγεθος γραμματοσειράς */
+    font-size: 20px; 
    
 }
