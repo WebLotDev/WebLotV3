@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebLot - Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="social.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="."><h1 class="logo"><img src="./logo-no-background.png" width="90px"></h1></a>
+            <nav>
+                <ul class="nav-links" id="navLinks" >
+                    <li><a href="https://www.weblot.gr#home">Home</a></li>
+                    <li><a href="https://www.weblot.gr#services">Services</a></li>
+                    <li><a href="https://www.weblot.gr#pricing">Pricing</a></li>
+                    <li><a href="https://www.weblot.gr#contact-container">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    &#9776;
+                </div>
+            </nav>
+        </div>
+        <section class="show_mobile">
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu" style="overflow: auto;">
+                <ul class="sidebarMenuInner">
+                      <li><a href="https://www.weblot.gr#home">Home</a></li>
+                    <li><a href="https://www.weblot.gr#services">Services</a></li>
+                    <li><a href="https://www.weblot.gr#pricing">Pricing</a></li>
+                    <li><a href="https://www.weblot.gr#contact-container">Contact</a></li>
+                </ul>
+            </div>
+        </section>
+    </header>
+
+
+    <section id="projects" class="services container">
+            <br>
+            <h2>Our Projects</h2>
+            <div class="service-grid">
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Color Generator</h3>
+                    <p>A tool that helps you create color palettes quickly and easily. Ideal for designers and developers who need beautiful colors for their projects.</p>
+                    <br>
+                    <a href="http://weblot.gr/ColorGenerator/" target="_blank" class="openProject">Preview</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>To-do List</h3>
+                    <p>A task management application that helps you organize your tasks with ease. It includes features for adding, editing, and deleting tasks.</p>
+                    <br>
+                    <a href="https://www.weblot.gr/ToDoList" target="_blank" class="openProject">Preview</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Mini Blog</h3>
+                    <p>A simple and flexible blog where you can share your thoughts and ideas. Supports creating, editing, and deleting posts.</p>
+                    <br>
+                    <a href="http://weblot.gr/MiniBlog/" target="_blank" class="openProject">Preview</a>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Currency Swap</h3>
+                    <p>An application for exchanging currencies with real-time conversion rates. Useful for travelers and anyone needing quick currency conversions.</p>
+                    <br>
+                    <a href="http://weblot.gr/CurrencySwap/" target="_blank" class="openProject">Preview</a>
+                </div>
+                
+                
+            </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WebLot. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
