@@ -1,0 +1,61 @@
+
+#popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
+    display: none; 
+    position: fixed;
+    z-index: 10001;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+#popup, #popup2, #popup3, #popup4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    max-height: 90%;
+    width: 80%;
+    overflow: auto;
+    border-radius: 10px;
+    text-align: left;
+  }
+
+.closePopup, .closePopup2, .closePopup3, .closePopup4 {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  #openPopupBtn, #openPopupBtn3, .openProject {
+    padding: 10px 15px;
+    background-color: #f4b400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+#openPopupBtn2,   #openPopupBtn4 {
+    padding: 10px 15px;
+    background-color: #ffffff;
+    color: #f4b400;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+    
+/* #openPopupBtn:hover,#openPopupBtn2:hover ,#openPopupBtn3:hover,#openPopupBtn4:hover {
+    font-size: 20px;
+  } */
+

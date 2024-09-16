@@ -1,15 +1,27 @@
-@media (max-width: 720px) {
+@media (max-width: 720px) 
+    {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     
-    body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
-        color: #333;
-    }
+    html, body {
+        overflow: hidden; /* Κρύβει εντελώς το scroll */
+      }
+      
+      body {
+        height: 100vh; /* Διατηρεί το ύψος του body */
+        overflow-y: scroll; /* Επιτρέπει το scroll αλλά χωρίς να εμφανίζεται η μπάρα */
+        scrollbar-width: none; /* Κρύβει τη μπάρα στο Firefox */
+        -ms-overflow-style: none; /* Κρύβει τη μπάρα στον Internet Explorer και στο Edge */
+      }
+      
+      /* Για Chrome, Safari και άλλους Webkit-based browsers */
+      body::-webkit-scrollbar {
+        display: none; /* Κρύβει τη μπάρα */
+      }
+      
     
     .container {
         width: 90%;
@@ -338,4 +350,3 @@
       }
       
 }
-

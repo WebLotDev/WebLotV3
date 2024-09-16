@@ -1,0 +1,401 @@
+@media (min-width: 721px) {
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+  }
+  
+  .container {
+      width: 90%;
+      margin: auto;
+      position: relative;
+  }
+  
+  header {
+      background: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      max-height: 100px;
+      z-index: 1000;
+  }
+  
+  .logo {
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+  }
+  
+  nav {
+      float: right;
+  }
+  
+  nav ul {
+      list-style: none;
+  }
+  
+  nav ul li {
+      display: inline-block;
+      margin-left: 20px;
+  }
+  
+  nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+      color: #f4b400;
+      text-decoration: underline;
+  }
+  
+  .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+  }
+  
+  .hero {
+    background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding-top: 80px;
+    animation: pulse 5s ease-in-out 0.5 forwards; /* Επανάληψη του pulse animation 2 φορές με smooth effect */
+  }
+  
+  .hero h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+  }
+  
+  .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+  }
+  
+  .btn {
+      background: #f4b400;
+      color: #fff;
+      padding: 12px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+  }
+  
+  .btn:hover {
+      background: #e09e00;
+  }
+  
+  .services {
+      padding: 80px 0;
+      background: #f9f9f9;
+  }
+  
+  .services h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+  }
+  
+  
+  
+  .service-grid {
+      display: flex;
+      overflow-x: scroll;
+      padding: 10px;
+      width: 100%;
+      gap: 20px;
+  
+      overflow: scroll; /* Επιτρέπει το scroll */
+      scrollbar-width: none; /* Κρύβει τη μπάρα στο Firefox */
+      -ms-overflow-style: none; /* Κρύβει τη μπάρα στον Internet Explorer και στο Edge */
+    }
+
+  
+
+  .service-grid::-webkit-scrollbar {
+    display: none; /* Κρύβει τη μπάρα */
+  }
+  
+  
+  
+  
+  
+  .service-card {
+      flex: 0 0 25%; /* Κάθε κάρτα καταλαμβάνει 25% του πλάτους, έτσι ώστε να εμφανίζονται 4 */
+      box-sizing: border-box;
+      background: #fff;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  
+  }
+  
+  
+  .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  }
+  
+  .scroll-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.238);
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+  }
+  
+  #left-arrow {
+      left: 0;
+  }
+  
+  #right-arrow {
+      right: 0;
+  }
+  
+  
+  .service-card i {
+      font-size: 40px;
+      color: #f4b400;
+      margin-bottom: 20px;
+  }
+  
+  .service-card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+  }
+  
+  .service-card p {
+      font-size: 16px;
+      color: #666;
+  }
+  
+  .pricing {
+      padding: 80px 0;
+  }
+  
+  .pricing h2 {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 32px;
+  }
+  
+  .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+  }
+  
+  .pricing-card {
+      background: #fff;
+      padding: 30px;
+      text-align: center;
+      border-radius: 10px;
+      border: 2px solid #f4b400;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pricing-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  }
+  
+  .pricing-card.featured {
+      background: #f4b400;
+      color: #fff;
+  }
+  
+  .pricing-card.featured .price {
+      color: #fff;
+  }
+  
+  .pricing-card h3 {
+      margin-bottom: 15px;
+      font-size: 24px;
+  }
+  
+  .price {
+      font-size: 32px;
+      margin-bottom: 20px;
+  }
+  
+  .pricing-card ul {
+      list-style: none;
+      margin-bottom: 20px;
+  }
+  
+  .pricing-card ul li {
+      margin: 10px 0;
+  }
+  
+  .pricing-card .btn {
+      background: #fff;
+      color: #f4b400;
+      border: 2px solid #fff;
+      transition: background 0.3s ease, color 0.3s ease;
+  }
+  
+  .pricing-card.featured .btn {
+      background: #fff;
+      color: #f4b400;
+  }
+  
+  .pricing-card .btn:hover {
+      background: #e09e00;
+      color: #fff;
+  }
+  
+  footer {
+      z-index: 1000;
+      position: fixed;
+      bottom: 0;
+      background: #333;
+      color: #fff;
+      width: 100%;
+      padding: 5px 0;
+      text-align: center;
+  }
+  
+  footer .socials a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+  }
+  
+  footer .socials a:hover {
+      color: #f4b400;
+  }
+  
+  #popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
+      display: none; 
+      position: fixed;
+      z-index: 10001;
+      top: 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
+    }
+  
+    #popup, #popup2, #popup3, #popup4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      max-height: 90%;
+      width: 80%;
+      overflow: auto;
+      border-radius: 10px;
+      text-align: left;
+    }
+  
+    .closePopup, .closePopup2, .closePopup3, .closePopup4 {
+      background-color: #f44336;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      margin-top: 10px;
+      cursor: pointer;
+          border-radius: 5px;
+    }
+  
+    #openPopupBtn, #openPopupBtn3, .openProject {
+      padding: 10px 15px;
+      background-color: #f4b400;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  
+      #openPopupBtn2,   #openPopupBtn4 {
+          padding: 10px 15px;
+          background-color: #ffffff;
+          color: #f4b400;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          text-decoration: none;
+        }
+      
+        /* #openPopupBtn:hover,#openPopupBtn2:hover ,#openPopupBtn3:hover,#openPopupBtn4:hover {
+          font-size: 20px;
+        } */
+  
+    @media only screen and (min-width: 720px) {
+      .show_mobile  {display: none;}
+      .nav-links   {display: block;}
+      .sidebarMenuInner{max-height: 100%; }
+    }
+    
+    
+    @media only screen and (max-width: 720px) {
+      .show_mobile {display: block;}
+      .nav-links {display: none;}
+    } 
+  
+    .nav-links{
+      margin-top: 10px;
+    }
+  
+  .nav-links li a {
+      font-size: 20px; 
+     
+  }
+  
+  .more-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #f4b400;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+  
+}
+
