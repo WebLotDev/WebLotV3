@@ -1,0 +1,73 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  .hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+  .logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.btn {
+    background: #f4b400;
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+.btn:hover { background: #e09e00;}
+
+.more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f4b400;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+  footer {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    background: #333;
+    color: #fff;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+}
+
+  footer .socials a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+footer .socials a:hover { color: #f4b400;}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+

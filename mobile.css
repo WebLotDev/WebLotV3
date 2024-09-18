@@ -1,27 +1,15 @@
-@media (max-width: 720px) 
-    {
+@media (max-width: 720px) {
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
     }
     
-    
-/* Κρύβει το scroll bar σε Webkit browsers (Chrome, Safari, κινητά) */
-body {
-    -webkit-overflow-scrolling: touch; /* Διευκολύνει το scroll στο κινητό */
-    overflow-y: scroll; /* Διατηρεί το scroll, αλλά κρύβει το scroll bar */
-}
-
-::-webkit-scrollbar {
-    display: none; /* Κρύβει το scroll bar σε Webkit browsers */
-}
-
-/* Κρύβει το scroll bar σε Firefox */
-body {
-    scrollbar-width: none; /* Κρύβει το scroll bar σε Firefox */
-}
-      
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+    }
     
     .container {
         width: 90%;
@@ -350,3 +338,4 @@ body {
       }
       
 }
+
