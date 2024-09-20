@@ -1,0 +1,79 @@
+ /* Fancy Dark Mode Toggle */
+ .fancy-toggle {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    margin: 10; /* Αφαίρεση του margin-left */
+}
+
+.fancy-span {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    animation: pulse 2s infinite;
+}
+
+/* Glow effect in dark mode */
+body.dark-mode .fancy-toggle {
+    background-color: #444;
+}
+
+body.dark-mode .fancy-span {
+    background-color: #f4b400;
+    left: 32px; /* Move to the right */
+    box-shadow: 0 0 15px rgba(244, 180, 0, 0.8); /* Glowing effect in dark mode */
+}
+
+/* Optional: Pulse animation for the toggle */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+    }
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.nav-links a.dark-mode {
+    color: #e0e0e0;
+}
+
+.hero.dark-mode {
+    background-color: #1f1f1f;
+    background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    opacity: 0.8;
+}
+
+.btn.dark-mode {
+    background-color: #333;
+    color: #f4b400;
+}
+
