@@ -53,21 +53,21 @@ body.dark-mode .fancy-span {
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background-color: #333;
+    color: #ccc;
 }
 
 header.dark-mode {
-    background-color: #1f1f1f;
-    color: #e0e0e0;
+    background-color: #333;
+    color: #333;
 }
 
 .nav-links a.dark-mode {
-    color: #e0e0e0;
+    color: #ccc;
 }
 
 .hero.dark-mode {
-    background-color: #1f1f1f;
+    background-color: #333;
     background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
     opacity: 0.8;
 }
@@ -76,4 +76,10 @@ header.dark-mode {
     background-color: #333;
     color: #f4b400;
 }
+
+.services.dark-mode, .pricing.dark-mode{
+    background-color: #333;
+    color: #333;
+}
+
 

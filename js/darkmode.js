@@ -41,6 +41,12 @@ toggleSwitch.addEventListener('click', () => {
     document.querySelectorAll('.btn').forEach(btn => {
         btn.classList.toggle('dark-mode');
     });
+    document.querySelectorAll('.services').forEach(sercive => {
+        sercive.classList.toggle('dark-mode');
+    });
+    document.querySelectorAll('.pricing').forEach(pricing => {
+        pricing.classList.toggle('dark-mode');
+    });
     
     // Save theme to localStorage
     let theme = 'light';
