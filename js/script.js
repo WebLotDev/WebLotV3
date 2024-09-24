@@ -25,20 +25,44 @@ sidebarLinks.forEach(link => {
 });
 
 window.onscroll = function() {
-  const header = document.querySelector('header'); // Επιλέγουμε το στοιχείο <header>
-  const menuMobile = document.getElementById('menu_mobile'); // Επιλέγουμε το στοιχείο <section>
+    const header = document.querySelector('header'); // Επιλέγουμε το στοιχείο <header>
+    const menuMobile = document.getElementById('menu_mobile'); // Επιλέγουμε το στοιχείο <section>
 
-  if (window.scrollY > 15) {
-      // Αλλάζουμε το background αν το scroll είναι πάνω από 15px
-      header.style.background = "#333";
-      menuMobile.style.display = "block";
+    if (window.scrollY > 15) {
+        // Αλλάζουμε το background αν το scroll είναι πάνω από 15px
+        header.style.background = "#333";
 
-  } else {
-      // Επαναφέρουμε το αρχικό background αν είναι κάτω από 15px
-      header.style.background = "transparent"; // Ή το αρχικό σου χρώμα
-      menuMobile.style.display = "none";
+        // Ελέγχουμε αν η οθόνη είναι κινητό
+        if (window.innerWidth <= 768) { // Μπορείς να αλλάξεις το 768 αν χρειάζεται
+            menuMobile.style.display = "block"; // Εμφανίζουμε το menu_mobile
+        }
+    } else {
+        // Επαναφέρουμε το αρχικό background αν είναι κάτω από 15px
+        header.style.background = "transparent"; // Ή το αρχικό σου χρώμα
 
-  }
+        // Κρύβουμε το menu_mobile
+        menuMobile.style.display = "none";
+    }
+};
+window.onscroll = function() {
+    const header = document.querySelector('header'); // Επιλέγουμε το στοιχείο <header>
+    const menuMobile = document.getElementById('menu_mobile'); // Επιλέγουμε το στοιχείο <section>
+
+    if (window.scrollY > 15) {
+        // Αλλάζουμε το background αν το scroll είναι πάνω από 15px
+        header.style.background = "#333";
+
+        // Ελέγχουμε αν η οθόνη είναι κινητό
+        if (window.innerWidth <= 720) { // Μπορείς να αλλάξεις το 768 αν χρειάζεται
+            menuMobile.style.display = "block"; // Εμφανίζουμε το menu_mobile
+        }
+    } else {
+        // Επαναφέρουμε το αρχικό background αν είναι κάτω από 15px
+        header.style.background = "transparent"; // Ή το αρχικό σου χρώμα
+
+        // Κρύβουμε το menu_mobile
+        menuMobile.style.display = "none";
+    }
 };
 
 
