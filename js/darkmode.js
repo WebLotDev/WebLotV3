@@ -1,5 +1,6 @@
-// Κοινή λειτουργία για να εναλλάσσει το dark mode
-function toggleDarkMode() {
+// Dark mode toggle functionality
+const toggleSwitch2 = document.getElementById('darkModeToggle2');
+toggleSwitch2.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 
     // Toggle dark mode for other elements as needed
@@ -7,77 +8,72 @@ function toggleDarkMode() {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.toggle('dark-mode');
     });
-
     const heroElement = document.querySelector('.hero');
     if (heroElement) {
-        heroElement.classList.toggle('dark-mode');
+      heroElement.classList.toggle('dark-mode');
     }
-
-    document.querySelectorAll('.btn').forEach(btn => {
+        document.querySelectorAll('.btn').forEach(btn => {
         btn.classList.toggle('dark-mode');
     });
 
-    document.getElementById('projects')?.classList.toggle('dark-mode');
-    document.getElementById('services')?.classList.toggle('dark-mode');
-    document.getElementById('pricing')?.classList.toggle('dark-mode');
-    document.querySelectorAll('.container').forEach(container => {
-        container.classList.toggle('dark-mode');
-    });
 
+    
     // Save theme to localStorage
-    saveThemePreference();
-}
-
-// Λειτουργία για την αποθήκευση του θέματος στο localStorage
-function saveThemePreference() {
     let theme = 'light';
     if (document.body.classList.contains('dark-mode')) {
         theme = 'dark';
     }
     localStorage.setItem('theme', theme);
+});
+
+// Load dark mode preference from localStorage
+const currentTheme2 = localStorage.getItem('theme');
+if (currentTheme2) {
+    document.body.classList.add(currentTheme2);
 }
 
-// Λειτουργία για την φόρτωση του θέματος από το localStorage
-function loadThemePreference() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        document.body.classList.add(savedTheme);
-
-        if (savedTheme === 'dark') {
-            document.querySelector('header').classList.add('dark-mode');
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.classList.add('dark-mode');
-            });
-
-            const heroElement = document.querySelector('.hero');
-            if (heroElement) {
-                heroElement.classList.add('dark-mode');
-            }
-
-            document.querySelectorAll('.btn').forEach(btn => {
-                btn.classList.add('dark-mode');
-            });
-
-            document.getElementById('projects')?.classList.add('dark-mode');
-            document.getElementById('services')?.classList.add('dark-mode');
-            document.getElementById('pricing')?.classList.add('dark-mode');
-            document.querySelectorAll('.container').forEach(container => {
-                container.classList.add('dark-mode');
-            });
-        }
-    }
-}
-
-// Συνδέουμε τη λειτουργία και με τα δύο κουμπιά toggle
+// Dark mode toggle functionality
 const toggleSwitch = document.getElementById('darkModeToggle');
-const toggleSwitch2 = document.getElementById('darkModeToggle2');
+toggleSwitch.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Toggle dark mode for other elements as needed
+    document.querySelector('header').classList.toggle('dark-mode');
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.classList.toggle('dark-mode');
+    });
+    const heroElement = document.querySelector('.hero');
+    document.getElementById('projects').classList.toggle('dark-mode');
+    document.getElementById('services').classList.toggle('dark-mode');
+    document.getElementById('pricing').classList.toggle('dark-mode');
 
-if (toggleSwitch) {
-    toggleSwitch.addEventListener('click', toggleDarkMode);
-}
-if (toggleSwitch2) {
-    toggleSwitch2.addEventListener('click', toggleDarkMode);
+
+
+    document.querySelectorAll('.container').forEach(container => {
+        container.classList.toggle('dark-mode');
+    });
+
+
+    if (heroElement) {
+      heroElement.classList.toggle('dark-mode');
+    }
+    
+    document.querySelectorAll('.btn').forEach(btn => {
+        btn.classList.toggle('dark-mode');
+    });
+
+
+    // Save theme to localStorage
+    let theme = 'light';
+    if (document.body.classList.contains('dark-mode')) {
+        theme = 'dark';
+    }
+    localStorage.setItem('theme', theme);
+});
+
+// Load dark mode preference from localStorage
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme) {
+    document.body.classList.add(currentTheme);
 }
 
-// Φορτώνουμε την αποθηκευμένη προτίμηση κατά την αρχική φόρτωση της σελίδας
-loadThemePreference();
