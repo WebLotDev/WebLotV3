@@ -2,15 +2,28 @@
 const toggleSwitch2 = document.getElementById('darkModeToggle2');
 toggleSwitch2.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    
+    document.getElementById('services').classList.toggle('dark-mode');
+    document.getElementById('pricing').classList.toggle('dark-mode');
+
     // Toggle dark mode for other elements as needed
     document.querySelector('header').classList.toggle('dark-mode');
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.toggle('dark-mode');
     });
-    document.querySelector('.hero').classList.toggle('dark-mode');
-    document.querySelectorAll('.btn').forEach(btn => {
+    const heroElement = document.querySelector('.hero');
+
+    if (heroElement) {
+      heroElement.classList.toggle('dark-mode');
+    }
+        document.querySelectorAll('.btn').forEach(btn => {
         btn.classList.toggle('dark-mode');
+    });
+    document.querySelectorAll('.service-grid').forEach(servicegrid => {
+        servicegrid.classList.toggle('dark-mode');
+    });
+
+    document.querySelectorAll('.service-card').forEach(servicecard => {
+        servicecard.classList.toggle('dark-mode');
     });
     
     // Save theme to localStorage
@@ -37,17 +50,23 @@ toggleSwitch.addEventListener('click', () => {
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.toggle('dark-mode');
     });
-    document.querySelector('.hero').classList.toggle('dark-mode');
+    const heroElement = document.querySelector('.hero');
+    document.getElementById('projects').classList.toggle('dark-mode');
+    document.getElementById('services').classList.toggle('dark-mode');
+    document.getElementById('pricing').classList.toggle('dark-mode');
+
+    if (heroElement) {
+      heroElement.classList.toggle('dark-mode');
+    }
+    
     document.querySelectorAll('.btn').forEach(btn => {
         btn.classList.toggle('dark-mode');
     });
-    document.querySelectorAll('.services').forEach(sercive => {
-        sercive.classList.toggle('dark-mode');
+
+    document.querySelectorAll('.service-card').forEach(servicecard => {
+        servicecard.classList.toggle('dark-mode');
     });
-    document.querySelectorAll('.pricing').forEach(pricing => {
-        pricing.classList.toggle('dark-mode');
-    });
-    
+
     // Save theme to localStorage
     let theme = 'light';
     if (document.body.classList.contains('dark-mode')) {

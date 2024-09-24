@@ -54,7 +54,6 @@ body.dark-mode .fancy-span {
 
 body.dark-mode {
     background-color: #333;
-    color: #ccc;
 }
 
 header.dark-mode {
@@ -77,9 +76,17 @@ header.dark-mode {
     color: #f4b400;
 }
 
-.services.dark-mode, .pricing.dark-mode{
-    background-color: #333;
+.service-card.dark-mode, .pricing.dark-mode{
+    background-color: #ccc;
     color: #333;
+}
+
+#projects.dark-mode, #services.dark-mode, #pricing.dark-mode{
+    background-color: #333;
+}
+
+#projects.dark-mode h2, #services.dark-mode h2,  #pricing.dark-mode h2{
+    color: #ccc;
 }
 
 
