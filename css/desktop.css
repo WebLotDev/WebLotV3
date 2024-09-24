@@ -121,12 +121,8 @@ nav ul li {
       background: #e09e00;
   }
   
-  .services {
-      padding: 80px 0;
-      background: #f9f9f9;
-  }
   
-  .services h2 {
+  .conterner h2 {
       text-align: center;
       margin-bottom: 40px;
       font-size: 32px;

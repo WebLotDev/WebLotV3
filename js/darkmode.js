@@ -2,8 +2,6 @@
 const toggleSwitch2 = document.getElementById('darkModeToggle2');
 toggleSwitch2.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    document.getElementById('services').classList.toggle('dark-mode');
-    document.getElementById('pricing').classList.toggle('dark-mode');
 
     // Toggle dark mode for other elements as needed
     document.querySelector('header').classList.toggle('dark-mode');
@@ -11,20 +9,14 @@ toggleSwitch2.addEventListener('click', () => {
         link.classList.toggle('dark-mode');
     });
     const heroElement = document.querySelector('.hero');
-
     if (heroElement) {
       heroElement.classList.toggle('dark-mode');
     }
         document.querySelectorAll('.btn').forEach(btn => {
         btn.classList.toggle('dark-mode');
     });
-    document.querySelectorAll('.service-grid').forEach(servicegrid => {
-        servicegrid.classList.toggle('dark-mode');
-    });
 
-    document.querySelectorAll('.service-card').forEach(servicecard => {
-        servicecard.classList.toggle('dark-mode');
-    });
+
     
     // Save theme to localStorage
     let theme = 'light';
@@ -55,6 +47,13 @@ toggleSwitch.addEventListener('click', () => {
     document.getElementById('services').classList.toggle('dark-mode');
     document.getElementById('pricing').classList.toggle('dark-mode');
 
+
+
+    document.querySelectorAll('.container').forEach(container => {
+        container.classList.toggle('dark-mode');
+    });
+
+
     if (heroElement) {
       heroElement.classList.toggle('dark-mode');
     }
@@ -63,9 +62,6 @@ toggleSwitch.addEventListener('click', () => {
         btn.classList.toggle('dark-mode');
     });
 
-    document.querySelectorAll('.service-card').forEach(servicecard => {
-        servicecard.classList.toggle('dark-mode');
-    });
 
     // Save theme to localStorage
     let theme = 'light';

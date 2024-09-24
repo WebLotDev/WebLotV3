@@ -30,6 +30,11 @@ body.dark-mode .fancy-toggle {
     background-color: #444;
 }
 
+body.dark-mode h2 {
+    color: #ccc;
+}
+
+
 body.dark-mode .fancy-span {
     background-color: #f4b400;
     left: 32px; /* Move to the right */
@@ -53,7 +58,7 @@ body.dark-mode .fancy-span {
 }
 
 body.dark-mode {
-    background-color: #333;
+    background-color: #333; 
 }
 
 header.dark-mode {
@@ -75,18 +80,3 @@ header.dark-mode {
     background-color: #333;
     color: #f4b400;
 }
-
-.service-card.dark-mode, .pricing.dark-mode{
-    background-color: #ccc;
-    color: #333;
-}
-
-#projects.dark-mode, #services.dark-mode, #pricing.dark-mode{
-    background-color: #333;
-}
-
-#projects.dark-mode h2, #services.dark-mode h2,  #pricing.dark-mode h2{
-    color: #ccc;
-}
-
-
