@@ -24,4 +24,17 @@ sidebarLinks.forEach(link => {
     });
 });
 
+window.onscroll = function() {
+  const header = document.querySelector('header'); // Επιλέγουμε το στοιχείο <header>
+
+  if (window.scrollY > 15) {
+      // Αλλάζουμε το background αν το scroll είναι πάνω από 15px
+      header.style.background = "#333";
+  } else {
+      // Επαναφέρουμε το αρχικό background αν είναι κάτω από 15px
+      header.style.background = "transparent"; // Ή το αρχικό σου χρώμα
+  }
+};
+
+
   
