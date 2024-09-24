@@ -26,13 +26,18 @@ sidebarLinks.forEach(link => {
 
 window.onscroll = function() {
   const header = document.querySelector('header'); // Επιλέγουμε το στοιχείο <header>
+  const menuMobile = document.getElementById('menu_mobile'); // Επιλέγουμε το στοιχείο <section>
 
   if (window.scrollY > 15) {
       // Αλλάζουμε το background αν το scroll είναι πάνω από 15px
       header.style.background = "#333";
+      menuMobile.style.display = "block";
+
   } else {
       // Επαναφέρουμε το αρχικό background αν είναι κάτω από 15px
       header.style.background = "transparent"; // Ή το αρχικό σου χρώμα
+      menuMobile.style.display = "none";
+
   }
 };
 
