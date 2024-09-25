@@ -1,61 +1,168 @@
-
-#popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
-    display: none; 
+  /* Your improved CSS here */
+  #popupOverlay, #popupOverlay2, #popupOverlay3, #popupOverlay4 {
+    display: none;
     position: fixed;
     z-index: 10001;
     top: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-  }
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    transition: opacity 0.3s ease;
+}
 
 #popup, #popup2, #popup3, #popup4 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0.9);
     background-color: #fff;
-    padding: 20px;
-    max-height: 90%;
+    padding: 25px;
     width: 80%;
-    overflow: auto;
-    border-radius: 10px;
-    text-align: left;
-  }
+    height: 95%;
+    max-width: 600px;
+    overflow: hidden;
+    max-height: 95%;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
 
-.closePopup, .closePopup2, .closePopup3, .closePopup4 {
-    background-color: #f44336;
+.details{
+  overflow: auto;
+  max-height: 600px;
+  text-align: justify;
+  padding: 10px;
+}
+
+.show {
+    display: block;
+    opacity: 1;
+}
+.pricepopup {
+  font-size: 1.0em; /* Μεγαλύτερη γραμματοσειρά */
+  color: #2c3e50; /* Χρώμα γραμματοσειράς */
+  background-color: #ecf0f1; /* Ελαφρύ χρώμα φόντου */
+  padding: 10px 15px; /* Εσωτερική απόσταση */
+  border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+  display: inline-block; /* Να συμπεριφέρεται ως inline-block στοιχείο */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Σκιά */
+  margin: 10px 0; /* Εξωτερική απόσταση */
+  transition: transform 0.3s ease; /* Μετάβαση για εφέ hover */
+}
+
+.pricepopup:hover {
+  transform: scale(1.05); /* Εφέ μεγέθυνσης κατά το hover */
+}
+
+#popup.show, #popup2.show, #popup3.show, #popup4.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.closePopup {
     color: white;
     border: none;
-    padding: 10px 15px;
-    margin-top: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
     cursor: pointer;
     border-radius: 5px;
-  }
+    transition: background-color 0.3s ease;
+}
 
-  #openPopupBtn, #openPopupBtn3, .openProject {
-    padding: 10px 15px;
+
+#openPopupBtn {
+    padding: 10px 20px;
     background-color: #f4b400;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-  }
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-#openPopupBtn2,   #openPopupBtn4 {
-    padding: 10px 15px;
-    background-color: #ffffff;
-    color: #f4b400;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-    
-/* #openPopupBtn:hover,#openPopupBtn2:hover ,#openPopupBtn3:hover,#openPopupBtn4:hover {
-    font-size: 20px;
-  } */
+.closePopup {
+  position: sticky; /* Χρήση sticky positioning */
+  bottom: 0; /* Ευθυγράμμιση στο κάτω μέρος */
+  background-color: #f44336;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
 
+
+#openPopupBtn:hover {
+    background-color: #e7a700;
+    transform: scale(1.05);
+}
+
+#popup ul,#popup2 ul,#popup3 ul,#popup4 ul {
+  list-style-type: none; /* Removes bullet points */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+}
+
+#popup ul li, #popup2 ul li, #popup3 ul li, #popup4 ul li {
+  margin-bottom: 10px; /* Απόσταση μεταξύ των στοιχείων li */
+  padding: 15px; /* Εσωτερικό περιθώριο */
+  background-color: #f9f9f9; /* Απαλό φόντο */
+  border: 1px solid #ddd; /* Ορατό περίγραμμα */
+  border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Απαλή σκιά */
+  transition: transform 0.2s; /* Ομαλή μετάβαση για hover */
+}
+
+#popup ul li:hover, #popup2 ul li:hover, #popup3 ul li:hover, #popup4 ul li:hover {
+  transform: translateY(-2px); /* Μικρή κίνηση προς τα πάνω όταν το στοιχείο περνάει από πάνω */
+  background-color: #f1f1f1; /* Ελαφρώς πιο σκούρο φόντο κατά το hover */
+}
+
+
+#popup h2,#popup2 h2,#popup3 h2,#popup4 h2 {
+  position: sticky; /* Χρήση sticky positioning */
+  top: 0; /* Ευθυγράμμιση στο κάτω μέρος */
+  text-align: center;
+  background-color: #e7a700;
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  color: #333232;
+}
+
+.price-description {
+  display: flex; /* Χρησιμοποιούμε Flexbox */
+  justify-content: space-between; /* Διανέμει τον διαθέσιμο χώρο */
+  align-items: center; /* Κεντράρει κάθετα τα στοιχεία */
+  padding: 15px; /* Εσωτερικό περιθώριο */
+  border-radius: 8px; /* Στρογγυλεμένες γωνίες */
+  margin: 10px 0; /* Εξωτερικό περιθώριο */
+}
+
+.pricepopup {
+  font-weight: bold; /* Έντονη γραφή για την τιμή */
+  color: #333; /* Χρώμα κειμένου */
+  margin-right: 20px; /* Απόσταση δεξιά από την τιμή */
+  white-space: nowrap; 
+}
+.description {
+  flex-grow: 1; /* Επιτρέπει στην περιγραφή να καταλαμβάνει τον διαθέσιμο χώρο */
+  margin-left: 20px; /* Απόσταση μεταξύ της τιμής και της περιγραφής */
+  color: #666; /* Χρώμα κειμένου για την περιγραφή */
+  flex-grow: 1; /* Επιτρέπει στην περιγραφή να καταλαμβάνει τον διαθέσιμο χώρο */
+
+}
+.description-title {
+  font-size: 1.5rem; /* Μέγεθος γραμματοσειράς */
+  font-weight: bold; /* Έντονη γραφή */
+  color: #333; /* Χρώμα κειμένου */
+  margin: 15px 0; /* Εξωτερικό περιθώριο */
+  text-transform: uppercase; /* Μετατρέπει το κείμενο σε κεφαλαία */
+  letter-spacing: 1px; /* Απόσταση μεταξύ των γραμμάτων */
+  border-bottom: 2px solid #f4b400; /* Κάτω γραμμή */
+  padding-bottom: 5px; /* Εσωτερικό περιθώριο κάτω */
+  background-color: #f9f9f9; /* Χρώμα φόντου */
+  border-radius: 5px; /* Στρογγυλεμένες γωνίες */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Απαλή σκιά */
+}

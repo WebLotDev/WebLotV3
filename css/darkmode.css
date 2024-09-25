@@ -34,7 +34,13 @@ body.dark-mode h2 {
     color: #ccc;
 }
 
+body.dark-mode td {
+    color: #ccc;
+}
 
+.container.dark-mode h1{
+    color: #ccc;
+}
 body.dark-mode .fancy-span {
     background-color: #f4b400;
     left: 32px; /* Move to the right */

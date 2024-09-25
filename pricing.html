@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="WebLot - Web Development">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="https://weblot.gr/files/img/image.png">
+    <title>WebLot - Web Development</title>
+    <link rel="stylesheet" href="./css/menu.css">
+    <link rel="stylesheet" href="./css/myserives.css">
+    <link rel="stylesheet" href="./css/darkmode.css">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="icon" sizes="16x16" href="https://weblot.gr/files/logo-ico/16x16.png">
+    <link rel="icon" sizes="32x32" href="https://weblot.gr/files/logo-ico/32x32.png">
+    <link rel="icon" sizes="48x48" href="https://weblot.gr/files/logo-ico/48x48.png">
+</head>
+<body>
+    <header>
+        <div class="container">
+                <a href="."><h1 class="logo"><img src="./files/logo-ico/logo-no-background.png" width="90px"></h1></a>
+            <nav>
+                <ul class="nav-links" id="navLinks" >
+                    <li><a href=".#home">Home</a></li>
+                    <li><a href=".#services">Services</a></li>
+                    <li><a href=".#projects">Projects</a></li>
+                    <li><a href=".#pricing">Pricing</a></li>
+                    <li><a href=".#contact-container">Contact</a></li>
+                    <li class="fancy-toggle">
+                        <span id="darkModeToggle" class="fancy-span"></span>
+                    </li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    &#9776;
+                </div>
+            </nav>
+            
+        </div>
+        <section class="show_mobile">
+            <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+            <label for="openSidebarMenu" class="sidebarIconToggle">
+                <div class="spinner diagonal part-1"></div>
+                <div class="spinner horizontal"></div>
+                <div class="spinner diagonal part-2"></div>
+            </label>
+            <div id="sidebarMenu" style="overflow: auto;">
+                <ul class="sidebarMenuInner">
+                      <li><a href=".#home">Home</a></li>
+                    <li><a href=".#services">Services</a></li>
+                    <li><a href=".#projects">Projects</a></li>
+                    <li><a href=".#pricing">Pricing</a></li>
+                    <li><a href=".#contact-container">Contact</a></li>
+                    <br>
+                    <li class="fancy-toggle">
+                        <span id="darkModeToggle2" class="fancy-span"></span>
+                    </li>
+                </ul>
+                
+            </div>
+
+         
+                
+        </section>
+        
+    </header>
+
+ 
+    <section id="projects" class="container">
+        <br><br><br><br><br>
+        <a href="./index.html#pricing" class="navigate-button">
+            <i class="fas fa-arrow-left"></i> Back
+        </a>
+        <h1 style="text-align: center;">Analytical Plans</h1>
+    
+        <table>
+            <thead>
+                <tr><th>Services</th><th>Basic</th><th>Standard</th><th>Premium</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Price</td><td class="price">€499</td><td class="price">€999</td><td class="price">€1499</td></tr>
+                <tr><td>Up to Pages</td><td>5 Pages</td><td>10 Pages</td><td>Unlimited Pages</td></tr>
+                <tr><td>Responsive Design</td><td class="checkmark">✓</td><td class="checkmark">✓</td><td class="checkmark">✓</td></tr>
+                <tr><td>Email Support</td><td class="checkmark">✓</td><td class="checkmark">✓</td><td class="checkmark">✓</td>
+                </tr><tr><td>SEO Optimization</td><td></td><td class="checkmark">✓</td><td class="checkmark">✓</td></tr>
+                <tr><td>Priority Support</td><td></td><td class="checkmark">✓</td><td class="checkmark">✓</td></tr>
+                <tr><td>Multilingual Support</td><td></td><td class="checkmark">✓</td><td class="checkmark">✓</td></tr>
+                <tr><td>Advanced SEO</td><td></td><td></td><td class="checkmark">✓</td></tr>
+                <tr><td>24/7 Support</td><td></td><td></td><td class="checkmark">✓</td></tr>
+                <tr><td>Social Media Integration</td><td></td><td></td><td class="checkmark">✓</td></tr>
+            </tbody>
+        </table>
+
+        <h2 style="text-align: center;">Extra Charges</h2>
+    
+    <table>
+        <thead>
+            <tr><th>Service</th><th>Extra Charge</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Google Analytics Setup</td><td class="price">€200</td></tr>
+            <tr><td>Social Media Integration</td><td class="price">€150</td></tr>
+            <tr><td>Import Newsletter </td><td class="price">€250</td></tr>
+            <tr><td>Content Writing (per page)</td><td class="price">€80</td></tr>
+            <tr><td>WooCommerce Plugin Setup</td><td class="price">€500</td></tr>
+            <tr><td>Performance Optimization Plugin (e.g., Caching)</td><td class="price">€130</td></tr>
+            <tr><td>Plugin Update & Maintenance</td><td class="price">€50/month</td></tr>
+
+        </tbody>
+    </table>
+    </section>
+    <br><br><br><br><br><br>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 WebLot. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/darkmode.js"></script>
+
+</body>
+</html>

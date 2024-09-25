@@ -98,8 +98,8 @@ nav ul li {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: auto;
-    height: auto;
+    width: 100%;
+    height: 100%;
     transform: translate(-50%, -50%);
     z-index: -1;
     object-fit: cover; /* Προσαρμόζει το βίντεο να καλύπτει ολόκληρη την οθόνη */
@@ -198,12 +198,20 @@ nav ul li {
       cursor: pointer;
       z-index: 1;
   }
-  
+  #services {
+    position: relative; /* Καθορίζει το position context για τα βέλη */
+    padding: 20px; /* Προσθέστε κάποιο padding αν χρειάζεται */
+}
+
   #left-arrow {
+    position: absolute; /* Καθορίζουμε τη θέση τους σε σχέση με το γονικό div */
+
       left: 0;
   }
   
   #right-arrow {
+    position: absolute; /* Καθορίζουμε τη θέση τους σε σχέση με το γονικό div */
+
       right: 0;
   }
   
@@ -224,7 +232,7 @@ nav ul li {
       color: #666;
   }
   
-  .pricing {
+  .pricing, #projects,#services {
       padding: 80px 0;
   }
   

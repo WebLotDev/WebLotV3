@@ -14,6 +14,27 @@
     font-weight: bold;
 }
 
+.navigate-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4b400;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navigate-button i {
+  margin-right: 8px; /* Απόσταση μεταξύ του εικονιδίου και του κειμένου */
+}
+
+.navigate-button:hover {
+  background-color: #e7a700; /* Αλλαγή χρώματος όταν περνάει ο δείκτης του ποντικιού */
+}
+
 .btn {
     background: #f4b400;
     color: #fff;

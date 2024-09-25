@@ -1,24 +1,30 @@
-function handlePopup(openBtnId, popupOverlayId, closeBtnClass) {
-  const popupOverlay = document.getElementById(popupOverlayId);
-  const openPopupBtn = document.getElementById(openBtnId);
-  const closePopupBtn = popupOverlay.querySelector(closeBtnClass);
+// Popup functionality
+document.addEventListener('DOMContentLoaded', () => {
+  const openPopupBtns = [
+      { button: document.getElementById('openPopupBtn'), overlay: document.getElementById('popupOverlay'), popup: document.getElementById('popup') },
+      { button: document.getElementById('openPopupBtn2'), overlay: document.getElementById('popupOverlay2'), popup: document.getElementById('popup2') },
+      { button: document.getElementById('openPopupBtn3'), overlay: document.getElementById('popupOverlay3'), popup: document.getElementById('popup3') },
+      { button: document.getElementById('openPopupBtn4'), overlay: document.getElementById('popupOverlay4'), popup: document.getElementById('popup4') }
+  ];
 
-  openPopupBtn.addEventListener("click", () => {
-    popupOverlay.style.display = "block";
+  openPopupBtns.forEach(({ button, overlay, popup }) => {
+      button.addEventListener('click', () => {
+          overlay.style.display = 'block'; // Show overlay
+          popup.classList.add('show'); // Add the show class to popup
+      });
+
+      const closeBtn = popup.querySelector('.closePopup, .closePopup2, .closePopup3, .closePopup4');
+      closeBtn.addEventListener('click', () => {
+          overlay.style.display = 'none'; // Hide overlay
+          popup.classList.remove('show'); // Remove show class
+      });
+
+      // Close popup when clicking outside of it
+      overlay.addEventListener('click', (event) => {
+          if (event.target === overlay) {
+              overlay.style.display = 'none'; // Hide overlay
+              popup.classList.remove('show'); // Remove show class
+          }
+      });
   });
-
-  closePopupBtn.addEventListener("click", () => {
-    popupOverlay.style.display = "none";
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target == popupOverlay) {
-      popupOverlay.style.display = "none";
-    }
-  });
-}
-
-handlePopup("openPopupBtn", "popupOverlay", ".closePopup");
-handlePopup("openPopupBtn2", "popupOverlay2", ".closePopup2");
-handlePopup("openPopupBtn3", "popupOverlay3", ".closePopup3");
-handlePopup("openPopupBtn4", "popupOverlay4", ".closePopup4");
+});
